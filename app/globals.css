@@ -64,3 +64,67 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+.gardeint-design {
+background: linear-gradient(to bottom, #1f2c3c 0%, #0d1d31 100%);}
+@layer utilities {
+  @keyframes fall {
+    to {
+      transform: translate3d(-30em, 0, 0);
+    }
+  }
+
+  @keyframes tail-fade {
+    0%, 50% {
+      width: var(--star-tail-length);
+      opacity: 1;
+    }
+    70%, 80% {
+      width: 0;
+      opacity: 0.4;
+    }
+    100% {
+      width: 0;
+      opacity: 0;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      opacity: 0.6;
+    }
+  }
+
+  .star {
+    position: absolute;
+    top: var(--top-offset);
+    left: 0;
+    width: var(--star-tail-length);
+    height: 2px;
+    background: linear-gradient(45deg, #00ADEA, transparent);
+    border-radius: 50%;
+    filter: drop-shadow(0 0 6px #00ADEA);
+    transform: translate3d(104em, 0, 0);
+    animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--fall-duration) var(--fall-delay) ease-out infinite;
+  }
+
+  .star::before, .star::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: calc(var(--star-width) / -2);
+    width: var(--star-width);
+    height: 100%;
+    background: linear-gradient(45deg, transparent, currentColor, transparent);
+    border-radius: inherit;
+    animation: blink 2s linear infinite;
+  }
+
+  .star::before {
+    transform: rotate(45deg);
+  }
+
+  .star::after {
+    transform: rotate(-45deg);
+  }
+}
+

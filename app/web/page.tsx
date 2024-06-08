@@ -1,4 +1,5 @@
 import ContactForm from '@/components/ContactForm';
+import FeaturesWebsite from '@/components/FeaturesWebsite';
 import HeroWeb from '@/components/HeroWeb';
 import Websites from '@/components/Websites';
 import React from 'react'
@@ -12,7 +13,10 @@ const Web = () => {
       <section className="h-max w-full  ">
         <Websites />
       </section>
-      <section className="h-max w-full  bg-slate-50 ">
+      <section className="h-max w-full   ">
+        <FeaturesWebsite />
+      </section>
+      <section className="h-max w-full ">
         <ContactForm />
       </section>
     </main>

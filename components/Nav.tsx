@@ -32,11 +32,11 @@ const links = [
       },
       {
         name: "التسويق الالكتروني",
-        target: "services",
+        target: "/marketing",
       },
       {
         name: "التصميم",
-        target: "services",
+        target: "/design",
       },
     ],
   },
