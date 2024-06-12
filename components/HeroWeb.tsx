@@ -38,7 +38,7 @@ const HeroWeb = () => {
             <FaWhatsapp className="xl:text-4xl text-3xl max-sm:text-2xl" />
           </a>
         </div>
-        <div className="xl:w-[25%] md:w-3/6 max-sm:w-[90%]">
+        <div className="xl:w-[25%] md:w-3/6 max-sm:w-[90%] flex justify-center items-center">
           {/* <Image
             src={"/assets/web/web-design.png"}
             width={350}

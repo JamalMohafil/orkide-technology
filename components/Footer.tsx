@@ -7,7 +7,21 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { AiFillTikTok } from "react-icons/ai";
-
+const otherPages = [
+  {
+    name: "سياسة الخصوصية",
+    link: "#",
+  },
+  {
+    name: "الأحكام والشروط",
+    link: "#",
+  },
+  {
+    name: "سياسة الاسترجاع",
+    link:'#'
+  },
+];
+const ourServices = ['تصميم جرافيكي','تطوير وورد بريس','تطوير تطبيقات','تطوير مواقع','تسويق الكتروني وادارة صفحات']
 const Footer = () => {
   return (
     <footer className=" bg-[#0d1c22] flex flex-col text-white pt-10 px-0">
@@ -30,7 +44,11 @@ const Footer = () => {
               <h2 className="font-semibold text-2xl max-sm:text-xl">
                 اتصل بنا
               </h2>
-              <a href='tel:+905011333366' dir="ltr" className="text-xl max-sm:text-lg">
+              <a
+                href="tel:+905011333366"
+                dir="ltr"
+                className="text-xl max-sm:text-lg"
+              >
                 +90 501 133 33 66
               </a>
             </div>
@@ -42,7 +60,11 @@ const Footer = () => {
             </span>
             <div className="flex flex-col gap-1 justify-center">
               <h2 className="font-semibold text-2xl max-sm:text-xl">راسلنا</h2>
-              <a href='mailto:orkidetech@gmail.com' dir="ltr" className="text-xl max-sm:text-lg">
+              <a
+                href="mailto:orkidetech@gmail.com"
+                dir="ltr"
+                className="text-xl max-sm:text-lg"
+              >
                 orkidetech@gmail.com
               </a>
             </div>
@@ -102,31 +124,21 @@ const Footer = () => {
           <div className="flex flex-col gap-4 ">
             <h2 className="text-xl text-accent font-semibold"> خدماتنا</h2>
             <ul className="list-none flex flex-col gap-4 justify-start items-start">
-              <li className="text-white">تصميم جرافيكي</li>
-              <li className="text-white">تطوير وورد بريس</li>
-              <li className="text-white">تطوير تطبيقات</li>{" "}
-              <li className="text-white">تطوير مواقع</li>{" "}
-              <li className="text-white">تسويق الكتروني وادارة صفحات</li>
+              {ourServices.map((item, i) => (
+                <li className="text-white" key={i}>{item}</li>
+              ))}
             </ul>
           </div>
           <div className="flex flex-col gap-4 ">
             <h2 className="text-xl text-accent font-semibold"> صفحات أخرى</h2>
             <ul className="list-none flex flex-col gap-4 justify-start items-start">
-              <li>
-                <a href="#" className="text-white hover:underline">
-                  سياسة الخصوصية
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white hover:underline">
-                  الأحكام والشروط{" "}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white hover:underline">
-                  سياسة الاسترجاع
-                </a>
-              </li>{" "}
+              {otherPages.map((item, i) => (
+                <li key={i}>
+                  <a href={item.link} className="text-white hover:underline">
+                    {item.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

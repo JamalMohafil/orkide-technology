@@ -85,7 +85,7 @@ const FeaturesWebsite = () => {
                 key={index}
                 className="max-md:w-5/6 md:w-[48%] min-[469px]:h-[350px] lg:w-[44%] w-[46%] bg-white shadow-lg justify-center items-center text-center rounded-lg py-4 px-5 flex flex-col gap-5"
               >
-                <div className="max-[468px]:w-3/6 hover:scale-110 transition-all">
+                <div className="max-[468px]:w-3/6 flex justify-center items-center hover:scale-110 transition-all">
                   <Image src={item.img} width={120} height={120} alt="" />
                 </div>{" "}
                 <h1 className="max-md:text-2xl md:text-2xl lg:text-2xl font-bold xl:text-3xl text-accent">
@@ -102,7 +102,7 @@ const FeaturesWebsite = () => {
                 key={index}
                 className="max-md:w-5/6 md:w-[48%] min-[469px]:h-[350px] lg:w-[31%] xl:w-[32%] bg-white justify-center items-center text-center shadow-lg rounded-lg py-12 px-5 flex flex-col gap-5"
               >
-                <div className="max-[468px]:w-3/6 hover:scale-110 transition-all">
+                <div className="max-[468px]:w-3/6 hover:scale-110 flex justify-center items-center transition-all">
                   <Image src={item.img} width={120} height={120} alt="" />
                 </div>
                 <h1 className="max-md:text-2xl md:text-2xl lg:text-2xl font-bold xl:text-3xl text-accent">

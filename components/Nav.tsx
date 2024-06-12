@@ -130,8 +130,8 @@ const Nav = () => {
         </a>
         <ul
           className={`md:hidden flex fixed translate-x-[-6%] bg-slate-100
-           shadow-xl w-[250px] top-[0%] trnaslate-y-[0%] py-6 justify-center items-center
-         gap-6 flex-col text-black h-screen transition-all ease ${
+           shadow-xl w-[250px] top-[0%] trnaslate-y-[0%] h-[100vh] py-6 justify-center items-center
+         gap-6 flex-col text-black  transition-all ease ${
            active ? `left-[0%]` : `left-[-100%] max-sm:left-[-180%]`
          } `}
         >
