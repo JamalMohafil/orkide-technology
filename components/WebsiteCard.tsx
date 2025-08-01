@@ -20,8 +20,9 @@ const WebsiteCard = ({name,description,img,number,link }:Card) => {
        rounded-lg bg-accent items-center "
       >
         <Image
-          className="rounded-xl object-cover   relative w-full h-full -left-2 -bottom-2"
-          src={`https://${img}`}
+          className="rounded-xl max-h-[200px] object-top object-cover
+            relative w-full h-full -left-2 -bottom-2"
+          src={`${img}`}
           width={300}
           height={300}
           alt={name}

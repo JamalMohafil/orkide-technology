@@ -5,7 +5,7 @@ import { CATEGORIES, WEBSITES } from "@/data/websites";
 
 const AllWebsites = () => {
   const [activeCat, setActiveCat] = useState<string>("الجميع");
-  const [limit, setLimit] = useState<number>(3);
+  const [limit, setLimit] = useState<number>(4);
   const [loading, setLoading] = useState<boolean>(false);
 
   const websitesMap =
@@ -27,11 +27,11 @@ const AllWebsites = () => {
          }
        });
       setLoading(false);
-    }, 1500); // Simulating a network request delay
+    }, 500); // Simulating a network request delay
   };
 
   const resetLimit = () => {
-    setLimit(3);
+    setLimit(4);
   };
 
   return (

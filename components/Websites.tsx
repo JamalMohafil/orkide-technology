@@ -17,7 +17,7 @@ const Websites = () => {
 
       <div className="flex flex-wrap lg:justify-between xl:justify-center items-center gap-y-10 xl:gap-x-8">
         {websitesMap.length > 0 ? (
-          websitesMap.slice(0, 3).map((card, index) => (
+          websitesMap.slice(0, 4).map((card, index) => (
             <div key={index} className="xl:w-2/5 lg:w-[46%] md:w-full ">
               <WebsiteCard
                 number={index + 1}
