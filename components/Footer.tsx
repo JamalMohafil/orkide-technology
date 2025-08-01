@@ -49,7 +49,7 @@ const Footer = () => {
                 dir="ltr"
                 className="text-xl max-sm:text-lg"
               >
-                +90 501 133 33 66
+                +90 505 578 13 00
               </a>
             </div>
           </div>
